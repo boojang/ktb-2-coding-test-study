@@ -1,4 +1,4 @@
-package week1;
+package 백준.week1;
 
 import java.io.*;
 import java.util.*;
@@ -11,6 +11,7 @@ import java.util.*;
  * Algorithm : DFS
  */
 
+// https://www.acmicpc.net/problem/15666
 public class N과M12 {
 
     static int N, M;
