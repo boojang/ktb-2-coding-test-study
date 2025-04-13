@@ -6,7 +6,7 @@ import java.io.*;
  * Author    : Kang San Ah
  * Date      : 2025.04.13(Sun)
  * Runtime   : 1 sec
- * Memory    : 256 MB
+ * Memory    : 512 MB
  * Algorithm : DP
  */
 
