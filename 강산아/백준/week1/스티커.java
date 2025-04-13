@@ -1,4 +1,4 @@
-package week1;
+package 백준.week1;
 
 import java.io.*;
 import java.util.*;

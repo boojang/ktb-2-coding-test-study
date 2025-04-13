@@ -1,4 +1,4 @@
-package week1;
+package 백준.week1;
 
 /**
  * Author    : Kang San Ah
