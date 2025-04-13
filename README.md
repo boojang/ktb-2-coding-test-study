@@ -37,7 +37,7 @@
 [ Java ]
 ```java
 /**
-* Author    : Lee In Bok
+* Author    : sando
 * Date      : 2024.01.01(Mon)
 * Runtime   : 712 ms  -> 프로그래머스의 경우 가장 안좋은 케이스를 넣어 주세요
 * Memory    : 58612 KB  -> 프로그래머스의 경우 가장 안좋은 케이스를 넣어 주세요
