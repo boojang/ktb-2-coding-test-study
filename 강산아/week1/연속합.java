@@ -10,7 +10,7 @@ package week1;
 
 import java.io.*;
 
-
+// https://www.acmicpc.net/problem/1912
 public class 연속합 {
 
     public static void main(String[] args) throws IOException {
