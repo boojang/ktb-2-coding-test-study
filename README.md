@@ -7,9 +7,9 @@
 | 이름  |Github|언어|
 |-----|:---:|:---:|
 | sando |[<img src="https://avatars.githubusercontent.com/gsandoo" width="50px;">](https://github.com/gsandoo)|<span><img src="https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=Java&logoColor=white"/></span>|
-| semi |[<img src="https://avatars.githubusercontent.com/boojang" width="50px;">](https://github.com/boojang)|<span><img src="https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=Java&logoColor=white"/></span>|
-| edwin |[<img src="https://avatars.githubusercontent.com/ghyen" width="50px;">](https://github.com/ghyen)|<span><img src="https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=Java&logoColor=white"/></span>|
-| danny |[<img src="https://avatars.githubusercontent.com/happy-yeachan" width="50px;">](https://github.com/happy-yeachan)|<span><img src="https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=Java&logoColor=white"/></span>|
+| semi |[<img src="https://avatars.githubusercontent.com/boojang" width="50px;">](https://github.com/boojang)|<span><img src="https://img.shields.io/badge/Python-007396.svg?&style=for-the-badge&logo=Java&logoColor=white"/></span>|
+| edwin |[<img src="https://avatars.githubusercontent.com/ghyen" width="50px;">](https://github.com/ghyen)|<span><img src="https://img.shields.io/badge/Python-007396.svg?&style=for-the-badge&logo=Java&logoColor=white"/></span>|
+| danny |[<img src="https://avatars.githubusercontent.com/happy-yeachan" width="50px;">](https://github.com/happy-yeachan)|<span><img src="https://img.shields.io/badge/Python-007396.svg?&style=for-the-badge&logo=Java&logoColor=white"/></span>|
 
 </br>
 
