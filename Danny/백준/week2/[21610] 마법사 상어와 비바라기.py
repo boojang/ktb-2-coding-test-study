@@ -40,7 +40,7 @@ for _ in range(M):
         li[x][y] += cnt
 
     # 구름 초기화 및 생성
-    prev_clouds = clouds  # 구름이 있었던 자리 기억
+    prev_clouds = set(clouds)  # 구름이 있었던 자리 기억
     clouds = []
 
     for i in range(N):
