@@ -3,6 +3,14 @@ package 백준.week2;
 import java.io.*;
 import java.util.*;
 
+/**
+ * Author    : Kang San Ah
+ * Date      : 2025.04.15(Tues)
+ * Runtime   : 2 sec
+ * Memory    : 128 MB
+ * Algorithm : Simulation, modulo
+ */
+
 public class 마법사상어와비바라기 {
 
     static int N, M, totalWater;
