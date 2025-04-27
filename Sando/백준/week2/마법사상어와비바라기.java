@@ -38,8 +38,8 @@ public class 마법사상어와비바라기 {
             for (int y = 0 ; y < N; y ++){
                 if (cloud[x][y]){
                     // 모듈러 계산 (arr 확장 가능)
-                    int nx = (x + dis[d][0]*s + N *100 ) % N;
-                    int ny = (y + dis[d][1]*s + N *100 ) % N;
+                    int nx = (x + dis[d][0]*s + N * 100) % N;
+                    int ny = (y + dis[d][1]*s + N * 100) % N;
 
                     visited[nx][ny] = true;
                     newCloud[nx][ny] = true;
