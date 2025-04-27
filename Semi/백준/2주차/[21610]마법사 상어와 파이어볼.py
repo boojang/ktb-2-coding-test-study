@@ -25,11 +25,11 @@ for i in range(k):
 
         nr = (r + dr[d] * s) % n
         nc = (c + dc[d] * s) % n
-        # print(f'nr:{nr}, nc:{nc}')
+        print(f'nr:{nr}, nc:{nc}')
 
         cells.setdefault((nr,nc),[]).append((m,s,d))
 
-        # print(cells)
+        print(cells)
 
     fire =[]
 
@@ -58,5 +58,5 @@ for i in range(k):
 
             for d in new_d:
                 fire.append((r,c,new_m,new_s,d))
-            # print(fire)
+            print(fire)
 print(sum(m for _,_,m,_,_ in fire))
