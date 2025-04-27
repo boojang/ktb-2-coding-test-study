@@ -1,13 +1,17 @@
 package 백준.week3;
 
-
-
-
-
 import java.util.*;
 import java.io.*;
 
+/**
+ * Author    : Kang San Ah
+ * Date      : 2025.04.27(Sun)
+ * Runtime   : 2 sec
+ * Memory    : 512 MB
+ * Algorithm : BFS
+ */
 
+// https://www.acmicpc.net/problem/17086
 class Main {
 
 
@@ -36,7 +40,7 @@ class Main {
         int distance = 0;
 
         while (!q.isEmpty()) {
-            int size = q.size(); // 현재 거리 level의 노드 개수
+            int size = q.size();
             distance++;
 
             for (int s = 0; s < size; s++) {

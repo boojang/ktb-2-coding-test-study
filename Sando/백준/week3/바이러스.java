@@ -1,11 +1,15 @@
 package 백준.week3;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
+import java.io.*;
+
+/**
+ * Author    : Kang San Ah
+ * Date      : 2025.04.27(Sun)
+ * Runtime   : 1 sec
+ * Memory    : 128 MB
+ * Algorithm : DFS
+ */
 
 // https://www.acmicpc.net/problem/2606
 public class 바이러스 {
