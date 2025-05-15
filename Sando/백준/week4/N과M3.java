@@ -18,7 +18,7 @@ class Main {
     static void dfs(int depth){
         if(depth == M){
             for(int x : output){
-                sb.append(x).append(' ')''
+                sb.append(x).append(' ');
             }
             sb.append('\n');
             return;
