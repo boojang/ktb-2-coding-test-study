@@ -1,3 +1,5 @@
+package 백준.week4;
+
 /**
  * Author    : Kang San Ah
  * Date      : 2025.05.15(Thu)
@@ -9,7 +11,7 @@
 import java.io.*;
 import java.util.*;
 
-class Main {
+class N과M3 {
 
     static int [] output;
     static int N, M;

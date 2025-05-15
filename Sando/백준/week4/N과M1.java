@@ -12,7 +12,7 @@ package 백준.week4;
 import java.io.*;
 import java.util.*;
 
-class Main{
+class N과M1 {
 
     static boolean[] visited;
     static int[] answer;
