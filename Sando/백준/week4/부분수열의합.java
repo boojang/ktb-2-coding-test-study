@@ -1,5 +1,12 @@
 package 백준.week4;
 
+/**
+ * Author    : Kang San Ah
+ * Date      : 2025.05.15(Thu)
+ * Runtime   : 1 sec
+ * Memory    : 512 MB
+ * Algorithm : DFS
+ */
 
 import java.io.BufferedReader;
 import java.io.IOException;
