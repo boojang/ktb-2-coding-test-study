@@ -55,8 +55,9 @@ public class 마법사상어와파이어볼 {
             List<Fireball> next = new ArrayList<>();
             // 이동
             for (Fireball fireball : f) {
-                int nr = (fireball.r + dr[fireball.d] * fireball.s + N * 1000) % N;
-                int nc = (fireball.c + dc[fireball.d] * fireball.s + N * 1000) % N;
+                // modulo 연산
+                int nr = (fireball.r + dr[fireball.d] * fireball.s ) % N;
+                int nc = (fireball.c + dc[fireball.d] * fireball.s ) % N;
                 map[nr][nc].add(new Fireball(nr, nc, fireball.m, fireball.s, fireball.d));
             }
 
