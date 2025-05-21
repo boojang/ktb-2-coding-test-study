@@ -3,7 +3,7 @@ Author    : semi
 Date      : 2025.05.20(Tues)
 Runtime   : 164ms
 Memory    : 32412KB
-Algorithm :
+Algorithm : BackTracking
 '''
 
 n,m = map(int,input().split())
