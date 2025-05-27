@@ -2,6 +2,12 @@ package 프로그래머스.week5;
 
 import java.util.*;
 
+/**
+ * Author    : Kang San Ah
+ * Date      : 2025.05.22(Thu)
+ * Algorithm : Sort
+ */
+
 class 가장큰수 {
     public String solution(int[] numbers) {
 
