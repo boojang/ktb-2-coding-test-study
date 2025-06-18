@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7afd306-2a10-4345-ba5b-ab07a5cf5abf" name="변경" comment="Feat: 6주차 sando 문제 풀이">
-      <change afterPath="$PROJECT_DIR$/Sando/백준/week3/숨바꼭질4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sando/백준/week7/차이를 최대로.py" afterDir="false" />
-    </list>
+    <list default="true" id="f7afd306-2a10-4345-ba5b-ab07a5cf5abf" name="변경" comment="Feat: 6주차 sando 문제 풀이" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +22,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2vMBFqyDFjxUIUAjggE0Vh5Vn6C" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -237,6 +235,7 @@
       <workItem from="1748433534124" duration="5004000" />
       <workItem from="1749091606355" duration="830000" />
       <workItem from="1749604629677" duration="151000" />
+      <workItem from="1749709994397" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="week1 sando N과M12">
       <created>1744019150910</created>
