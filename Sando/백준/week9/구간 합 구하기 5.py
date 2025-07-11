@@ -4,7 +4,7 @@
 #  * Memory    : 128 MB
 #  * Algorithm : 구간 합
 
-#11160
+#11660
 import sys
 input = sys.stdin.readline
 
