@@ -1,57 +1,59 @@
-from collections import deque
+# * https://www.acmicpc.net/problem/16234
+# * Author : Kang San Ah
+# * Date : 2025.07.15(Mon)
+# * Runtime : 2 sec
+# * Memory : 512 MB
+# * Algorithm : BFS
+
+from collections import deque 
 import sys
+import math
+
 input = sys.stdin.readline
 
-# 방향 벡터 (상, 우, 하, 좌)
 dx = [-1, 0, 1, 0]
 dy = [0, 1, 0, -1]
+n,l,r = map(int, input().split())
 
-# 입력
-n, l, r = map(int, input().split())
-arr = [list(map(int, input().split())) for _ in range(n)]
+arr = [list(map(int, input().split())) for _ in range(n)] # 2차원 배열
 
-def bfs(x, y, visited):
+def BFS(x,y,visited):
     q = deque()
-    q.append((x, y))
-    visited[x][y] = True
-    union = [(x, y)]  # 연합에 포함된 좌표들
-    total = arr[x][y]
-
+    q.append((x,y))
+    union = [(x,y)]
+    sum = 0
     while q:
         cx, cy = q.popleft()
         for i in range(4):
             nx = cx + dx[i]
             ny = cy + dy[i]
-            if 0 <= nx < n and 0 <= ny < n and not visited[nx][ny]:
-                if l <= abs(arr[cx][cy] - arr[nx][ny]) <= r:
+            if 0 <= nx  < n and  0 <= ny < n and not visited[nx][ny]:
+                if l <= abs(arr[x][y]-arr[nx][ny]) <= r: # l,r 범위 내인지 확인
+                    q.append((nx,ny))
                     visited[nx][ny] = True
-                    q.append((nx, ny))
-                    union.append((nx, ny)) # [(0,0) , (1,1)...]
-                    total += arr[nx][ny]
-
-    # 연합을 형성했다면 평균으로 인구 분배
+                    union.append((nx,ny))
+                    sum += arr[cx][cy] # 총합 더하기
+    
+    # 인구 분배             
     if len(union) > 1:
-        avg = total // len(union)
-        for ux, uy in union:
+        avg = sum // len(union)
+        for ux,uy in union : 
             arr[ux][uy] = avg
-        return True  # 인구 이동 발생
-
-    return False  # 인구 이동 없음
-
-# 메인 로직
+        return True
+    
+    return False
+    
 days = 0
 while True:
-    visited = [[False] * n for _ in range(n)]
-    moved = False
-
+    move = False
+    visited = [[False] * n for i in range(n)]
     for i in range(n):
         for j in range(n):
             if not visited[i][j]:
-                if bfs(i, j, visited):
-                    moved = True
-
-    if not moved:
+                if BFS(i,j,visited):
+                    move = True
+    if not move:
         break
-    days += 1
+    days+=1
 
-print(days)
+print(days)                    
