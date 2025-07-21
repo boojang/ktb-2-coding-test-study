@@ -9,17 +9,6 @@
 import sys
 from collections import deque
 input = sys.stdin.readline
-# sys.setrecursionlimit(10**6)
-
-
-# def DFS(node) : 
-#     visited[node] = True
-#     for i in a[node]:
-#         if not visited[i]:
-#             DFS(i)
-            
-#     return sum            
-
 
 def BFS(node) :
     sum = 0 
