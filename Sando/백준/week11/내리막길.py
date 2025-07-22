@@ -28,7 +28,6 @@ def dfs(x, y):
     for i in range(4):
         nx, ny = x + dx[i], y + dy[i]
         if 0 <= nx < n and 0 <= ny < m:
-            if arr[nx][ny] < arr[x][y]:  # 내리막길만
                 dp[x][y] += dfs(nx, ny)
 
     return dp[x][y]

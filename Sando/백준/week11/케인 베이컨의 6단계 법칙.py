@@ -4,7 +4,7 @@
 # * Date : 2025.07.21(Mon)
 # * Runtime : 2 sec
 # * Memory : 128 MB
-# * Algorithm : 
+# * Algorithm : BFS
 
 import sys
 from collections import deque
