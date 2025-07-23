@@ -1,12 +1,15 @@
 '''
 Author    : semi
 Date      : 2025.07.23(Wed)
-Runtime   :
-Memory    :
+Runtime   : 1704ms
+Memory    : 53244KB
 Algorithm : BFS
 '''
 
+import sys
 from collections import deque
+
+input = sys.stdin.readline
 
 K = int(input())
 
