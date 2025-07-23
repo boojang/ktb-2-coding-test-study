@@ -11,43 +11,38 @@ from collections import deque
 K = int(input())
 
 for _ in range(K):
-    queue = deque([])
     ans = 'YES'
-    # 정점갯수 , 간선 갯수
-    V, E = map(int, input().split())
+    
+    V, E = map(int, input().split()) # 정점갯수 , 간선 갯수
 
     graph = [[] for _ in range(V+1)]
     binary_group = [0] * (V+1) #0:그룹미지정 /1:그룹1 /2:그룹2
-    binary_group[1] = 1 #미리 설정
 
     for _ in range(E):
-        # 인접한 정점 번호
         u,v = map(int,input().split())
         graph[u].append(v)
         graph[v].append(u)
 
+    for i in range(1,V+1):
+        if binary_group[i] == 0:
+            queue = deque() # 큐 생성
+            queue.append(i)
+            binary_group[i] = 1 # 그룹1로 설정
 
-    # 이분그래프 확인 -> BFS로 탐색
-    while queue:
+            while queue:  # 이분그래프 확인 -> BFS로 탐색
 
-        ve = queue.popleft()
+                ve = queue.popleft()
 
-        for i in graph[ve]:
-            # 인접한 애들을 델고와
-            # 인접한 애들은 나랑 다른 그룹이여야해
-            # 누구를 queue에 넣을까? 인접한 애들을 넣자
+                for j in graph[ve]:
 
-            if binary_group[i] == 0:
-                num = 2 if binary_group[ve] ==1 else 1
-                binary_group[i] = num
-                #ve랑은 다른 그룹으로 설정
-                #만약 ve랑 같은 그룹이면 ans는 no
-                queue.append(i)
-            else:
-
-                if binary_group[ve] == binary_group[i]:
-                    print('진입')
-                    ans = 'NO'
+                    if binary_group[j] == 0:
+                        num = 2 if binary_group[ve] == 1 else 1
+                        binary_group[j] = num
+                        queue.append(j)
+                    else:
+                        if binary_group[ve] == binary_group[j]:
+                            # print(f"ve:{ve},j:{j}, binary_group[ve]:{binary_group[ve]}, binary_group[j]:{binary_group[j]}")
+                            ans = 'NO'
 
 
     print(ans)
