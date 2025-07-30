@@ -27,7 +27,7 @@ def solution(edges) :
             continue
         graph[a].append(b)
         
-    visited = set()
+    visited = set() #중복 방지. 즉 이번 경로에 이미 방문한 노드인지 판단하기 위해. 8자 여부
     
     donut = 0 
     eight = 0
@@ -36,14 +36,14 @@ def solution(edges) :
     for a,b in edges:
         if a != start : 
             continue
-        current = b
-        path = set ()
+        current = b # 현재 노드
+        path = set () # 중복 방지. 즉 이번 경로에 이미 방문한 노드인지 판단하기 위해. 도넛 여부
         prev = current
         while True:
             if current in path:
                 donut += 1
                 break
-            if current in visited :
+            if current in visited : # 8자 
                 eight +=1
                 break
             path.add(current)
@@ -66,5 +66,3 @@ def solution(edges) :
             
     return [start, donut, stick, eight]
     
-e = [[2, 3], [4, 3], [1, 1], [2, 1]]
-print(solution(e))
