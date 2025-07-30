@@ -18,15 +18,17 @@ for _ in range(K):
     
     V, E = map(int, input().split()) # 정점갯수 , 간선 갯수
 
-    graph = [[] for _ in range(V+1)]
+    #중복 간선 제외 -> set 사용
+    graph = [set() for _ in range(V+1)]
     binary_group = [0] * (V+1) #0:그룹미지정 /1:그룹1 /2:그룹2
 
     for _ in range(E):
         u,v = map(int,input().split())
-        graph[u].append(v)
-        graph[v].append(u)
-
+        graph[u].add(v)
+        graph[v].add(u)
+        
     for i in range(1,V+1):
+        
         if binary_group[i] == 0:
             queue = deque() # 큐 생성
             queue.append(i)
