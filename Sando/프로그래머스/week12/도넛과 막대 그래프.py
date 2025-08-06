@@ -1,3 +1,9 @@
+# * Author : Kang San Ah
+# * Date : 2025.07.24(Thu)
+# * Runtime : 2 sec
+# * Memory : 512 MB
+# * Algorithm : simulation
+
 from collections import defaultdict, deque
 
 def solution(edges) : 
