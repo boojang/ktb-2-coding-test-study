@@ -18,7 +18,7 @@ def backtracking():
     
     for i in range(1,n+1): #기준이 된다.
         sequence.append(i)
-        function()
+        backtracking()
         sequence.pop()
 
 backtracking()

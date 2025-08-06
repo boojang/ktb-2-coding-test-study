@@ -5,8 +5,9 @@ Runtime   : 2564ms
 Memory    : 52508KB
 Algorithm : BFS
 '''
-
+import sys
 from collections import deque
+input = sys.stdin.readline
 
 n = int(input())
 
@@ -19,6 +20,7 @@ for i in range(n-1):
     #연결되어 있는 것들이 다 들어가있음 -> 누가 부모인지 자식인지 모름
     graph[a].append(b)
     graph[b].append(a)
+print(graph)
 
 # BFS 탐색용 큐 -> 루트노드 1부터 시작
 queue = deque([1])
