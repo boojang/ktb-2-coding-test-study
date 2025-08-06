@@ -4,7 +4,7 @@
 # * Date : 2025.07.24(Thu)
 # * Runtime : 2 sec
 # * Memory : 512 MB
-# * Algorithm : BFS
+# * Algorithm : simulation
 
 from collections import Counter, defaultdict
 
