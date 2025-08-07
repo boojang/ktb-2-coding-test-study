@@ -3,12 +3,12 @@ Author    : semi
 Date      : 2025.08.06(Wed)
 Runtime   : ms
 Memory    : KB
-Algorithm :
+Algorithm : DP
 '''
 
 def solution(m, n, puddles):
     mod = 1000000007 #overflow 방지
-    
+
     # dp 배열  (0-indexed)
     dp = [[0] * (m + 1) for _ in range(n + 1)]
 
