@@ -13,7 +13,7 @@ def get_gift_index(gift_status):
 
     for i in range(n):
         given =sum(gift_status[i])
-        # received =sum(cols[i])
+        received =sum(cols[i])
         received = sum(gift_status[j][i] for j in range(n))
         gift_index.append(given-received)
 
@@ -21,9 +21,6 @@ def get_gift_index(gift_status):
 
 def get_gift_status(friends,gifts):
     n = len(friends)
-
-    # i 행의 합 : i번 사람이 남에게 준 선물 수
-    # i 열의 합 : i번 사람이 남에게 받은 선물 수
     gift_status = [[0]*n for _ in range(n)]
 
     #이름 -> 인덱스 매핑
