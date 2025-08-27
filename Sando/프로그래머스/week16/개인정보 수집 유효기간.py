@@ -1,4 +1,4 @@
-# https://school.programmers.co.kr/learn/courses/30/lessons/150370?language=python3
+# https://school.programmers.co.kr/learn/courses/30/lessons/389479
 
 # * Author : Kang San Ah
 # * Date : 2025.08.25(Mon)
