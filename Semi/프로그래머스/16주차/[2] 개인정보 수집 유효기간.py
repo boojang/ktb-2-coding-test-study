@@ -19,7 +19,6 @@ return pri
 
 def solution(today, terms, privacies):
 
-    cal_pri = []
     answer = []
 
     #terms -> 어떻게 매칭시킬까? -> key, value로 구분
@@ -27,33 +26,25 @@ def solution(today, terms, privacies):
     ter_d = {k:int(v) for k,v in (term.split() for term in terms)}
     
     # 날짜 계산
-    for privacy in privacies:
+    for idx,privacy in enumerate(privacies):
         date,term = privacy.split()
 
         year,month,day = date.split(".")
-        month = int(month) + ter_d[term]
 
-        if month >=13:
-            year = int(year)+1
-            #범위를 바꾸기
-            month = (month-1)%12 +1
+        # 일수로 통일 (28일을 안다)
+        pri_day = int(year)*12*28 + int(month)*28 + int(day)
+        term_day = ter_d[term]*28
 
-        day = int(day)-1
-        # day = 0 일 경우
-        if day == 0:
-            month -= 1
-            if month == 0:
-                month = 12
-            day = 28
+        total_day = pri_day + term_day # 유효기간까지 날짜
 
 
-        # new = ".".join(map(str,[year,month,day]))
-        # new = "{}.{}.{}".format(year,month,day)
-        new = f"{year}.{month}.{day}"
-        print(f"new = {new}")
-
-    # 유효기간 검증
-
+        # 유효기간 검증
+        year_t, month_t, day_t = today.split(".")
+        today_day = int(year_t)*12*28 + int(month_t)*28 + int(day_t)
+        
+        if today_day >= total_day:
+            #유효기간 마감
+            answer.append(idx+1)
 
     return answer
 
