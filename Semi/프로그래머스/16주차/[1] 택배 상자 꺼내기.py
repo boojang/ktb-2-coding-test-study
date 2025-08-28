@@ -6,33 +6,26 @@ Algorithm : 구현
 '''
 
 def solution(n, w, num):
-    col = 0
-    row = 0
-    box_cn = 1
 
-    # 행 구하기
-    if num % w ==0:
-        row = num//w
-    else:
-        row = (num//w) + 1
+    # 개선된 코드
+    # 1~n 범위를 0~(n-1) 범위로 변환
+    row = (num - 1) // w + 1
+
+    # 개선된 코드
+    temp_col_from_zero = (num-1) % w # 0부터 시작
+    print(f"temp_col_from_zero = { temp_col_from_zero }")
 
     # 열 구하기
-    if row % 2 == 1 : #홀수 (순행)
-        if num % w == 0:
-            col = num // row
-        else:
-            col = num % w
-
-    else: # 짝수 역행)
-        if num % w == 0:
-            col = 1
-        else:
-            col = (w+1)-(num % w)
+    if row % 2 == 1 : #홀수
+        col = temp_col_from_zero + 1
+    else: # 짝수
+        col = w-temp_col_from_zero
+    
+    print(f"row,col = { row,col }")
 
     # 위에 있는 상자갯수 구하기
+    box_cn = 1
     while True:
-        jump = 0
-
         if row % 2 ==1: #홀수
             jump = 2*w - (2*col-1)
         else: #짝수
@@ -45,7 +38,5 @@ def solution(n, w, num):
         row += 1
 
     return box_cn
-
-
 
 print(solution(22,6,12))
