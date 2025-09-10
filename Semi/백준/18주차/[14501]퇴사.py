@@ -23,13 +23,10 @@ for i in range(N):
 
     # 상담을 안 하는 경우
     if i>0:
-        # money[i + t] = max(money[i + t], money[i + t - 1])
         money[i] = max(money[i],money[i-1])
 
     # 상담을 하는 경우
     if i + t <= N:
-        # sol = sch[i][1]+sch[i+t][1]
-        # sol = sch[i][1] + money[i + t]
         money[i+t]=max(money[i+t],sch[i][1] + money[i])
 
 #최댓값
