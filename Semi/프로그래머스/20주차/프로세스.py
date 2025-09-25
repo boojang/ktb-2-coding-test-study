@@ -7,22 +7,20 @@ Algorithm :
 from collections import deque
 
 def solution(priorities, location):
-    pri_list = list(enumerate(priorities))
-    pri_max = max(priorities)
+    queue = deque(list(enumerate(priorities)))
     answer = 0
-    while len(pri_list)!=0:
-        c_p = pri_list.pop(0)
-        if(c_p[1]<pri_max):
-            pri_list.append(c_p)
+    while queue:
+        c_p = queue.popleft()
+        # queue에 남아있는 item 중 c_p보다 높은 item이 하나라도 있는지
+        if any(c_p[1] < item[1] for item in queue):
+            queue.append(c_p)
             continue
+        else:
+            answer += 1
+            if location == c_p[0]:
+                return answer
 
-        answer +=1
 
-        if any(pri_list):
-            pri_max = max(x[1] for x in pri_list)
-
-        if location == c_p[0]:
-            return answer
 
 
 
