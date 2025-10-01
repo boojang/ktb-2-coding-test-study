@@ -4,6 +4,20 @@ Author    : semi
 Date      : 2025.09.30(Tues)
 Algorithm :
 '''
+from collections import Counter
+
+def solution_efficient(participant, completion):
+
+    # 1. 참여자 :(name:count) Counter로 등장횟수 자동 계산
+    parti_dict = Counter(participant)
+
+    # 2. 완주자 :Counter로 등장횟수 자동 계산
+    compl_dict = Counter(completion)
+
+    # 3. 완주하지 못한 사람
+    not_compl = parti_dict - compl_dict
+
+    return list(not_compl.keys())[0]
 
 def solution(participant, completion):
     parti_dict = {}
@@ -25,28 +39,4 @@ def solution(participant, completion):
         if value == 1:
             return name
 
-
-
-'''
-#problem : set은 집합이므로 중복으로 저장하지 않는다.
-#bad-case : ["mislav", "stanko", "mislav", "ana"], 	["stanko", "ana", "mislav"]
-def solution1(participant, completion):
-    parti = set(participant)
-    comp = set(completion)
-    not_comp = parti - comp
-    not_comp = list(not_comp)
-    print(f"not_comp = { not_comp }")
-    return not_comp[0]
-
-#problem : 중복되는 이름이 있을 경우 통과해버린다.
-#bad-case : ["mislav", "stanko", "mislav", "ana"], 	["stanko", "ana", "mislav"]
-def solution2(participant, completion):
-    answer = []
-    for i in participant:
-        print(f"i = { i }")
-        if i not in completion:
-            answer.append(i)
-
-    print(f"answer = { answer }")
-    return
-'''
+solution_efficient(["mislav", "stanko", "mislav", "ana"],["stanko", "ana", "mislav"])
