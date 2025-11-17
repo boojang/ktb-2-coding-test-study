@@ -2,7 +2,7 @@
 https://school.programmers.co.kr/learn/courses/30/lessons/84512
 Author    : semi
 Date      : 2025.09.25(Thurs)
-Algorithm :
+Algorithm : stack/queue
 '''
 from collections import deque
 
