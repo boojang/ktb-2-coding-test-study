@@ -5,27 +5,22 @@ Runtime   : 300ms
 Memory    : 36080KB
 Algorithm :
 '''
-from collections import defaultdict,Counter
+from collections import Counter
 import sys
-
 
 input = sys.stdin.readline
 
+string = input().strip().upper()
+str_count = Counter(string)
 
-string = input().strip()
-str_dict = defaultdict(int)
+max_s = str_count.most_common(2)
 
-
-for s in string:
-    s=s.upper()
-    str_dict[s] +=1
-
-#최대값 - 동일하면 ?로 출력
-max_s = max(str_dict.values())
-max_list = [key for key,value in str_dict.items() if value==max_s]
-
-
-if len(max_list)>1:
+# 1개밖에 없으면 그대로 출력
+if len(max_s) == 1:
+    print(max_s[0][0])
+# 최댓값이 2개 이상이면 ?
+elif max_s[0][1] == max_s[1][1]:
     print("?")
+# 아니면 최댓값 1개
 else:
-    print(*max_list)
+    print(max_s[0][0])
