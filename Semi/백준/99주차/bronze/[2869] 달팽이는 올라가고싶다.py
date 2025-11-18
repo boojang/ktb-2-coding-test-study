@@ -1,8 +1,8 @@
 '''
 Author    : semi
 Date      : 2025.11.18(Tues)
-Runtime   : 300ms
-Memory    : 36080KB
+Runtime   : 36ms
+Memory    : 34536KB
 Algorithm :
 '''
 import sys
