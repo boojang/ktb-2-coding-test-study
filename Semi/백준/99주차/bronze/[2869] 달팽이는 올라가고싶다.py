@@ -6,28 +6,23 @@ Memory    : 36080KB
 Algorithm :
 '''
 import sys
+import math
 
 input = sys.stdin.readline
 
 A,B,V = map(int,input().split())
 
-cur = 0
-day = 1
+answer = math.ceil((V-A) / (A-B))
 
-while cur < V:
-    #낮
-    cur +=A
+print(answer +1)
 
-    if(cur >= V):
-        break
-    #밤
-    cur -=B
 
-    day += 1
 
-print(day)
-
-# day1 2 -1 = 1
-# day2 3 -1 = 2
-# day3 4 -1 = 3
-# day4 5 -> 끝
+'''
+- V 최대 : 10억 -> while문 10억 반복
+- while을 안쓰고 계산할 수 있는 방법
+- (A-B) : 하루동안 갈 거리 (순증가량)
+- 근데 A에서 V에 도착할것도 고려해야함
+- *V-A : 마지막 날 낮에 도착하기 직전 높이
+- *마지막날- 낮만 고려/ 그 전날 - (A-B)씩 증가
+'''
