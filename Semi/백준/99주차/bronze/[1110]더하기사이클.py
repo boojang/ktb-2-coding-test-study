@@ -1,43 +1,28 @@
 '''
 Author    : semi
 Date      : 2025.11.17(Mon)
-Runtime   : 300ms
-Memory    : 36080KB
+Runtime   : 36ms
+Memory    : 32544KB
 Algorithm :
 '''
 
 
 # 사이클의 길이
 
-N = input()
+N = int(input())
 
 answer=0
 cycle = N
 
 while True:
+    a = cycle // 10 #앞자리
+    b = cycle % 10 #뒷자리
+    c = (a+b) % 10 #뒷자리
 
-    if len(cycle) == 1:
-        a,b = '0',cycle
-    else:
-        a,b = cycle[0],cycle[1]
-
-    print(f"a,b = { a,b }")
-    c = str(int(a) + int(b))
-    print(f"c = { c }")
-
-    if len(c) == 1:
-        a,b = '0',c
-        cycle = cycle[1] + c
-    else:
-        a,b = c[0],c[1]
-        cycle = cycle[1] + c[1]
-
-
-    print(f"cycle = { cycle }")
+    cycle = int(str(b)+str(c))
 
     answer +=1
-
-    if cycle == N:
+    if N == cycle :
         break
 
 print(answer)
